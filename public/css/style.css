@@ -1,5 +1,4 @@
-<style>
-        .chessboard {
+       .chessboard {
             display: grid;
             grid-template-columns: repeat(8, minmax(0, 1fr));
             grid-template-rows: repeat(8, minmax(0, 1fr));
@@ -52,4 +51,3 @@
         .flipped .piece {
             transform: rotate(180deg);
         }
-    </style>
