@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
     res.render("index", { title: "Chess Game" })
 });
 
+io.on("connection", function (uniqueSocket) {
+    console.log("connected");
+})
+
 server.listen(3000, function () {
     console.log("Listening on http://localhost:3000");
 });
