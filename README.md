@@ -1,10 +1,10 @@
 ![Alt text](/public/img/chees%20oppnet%201.png "a title")
 
-<h1>opponent 1</h1>
+<h1>Player 1</h1>
 
 ![Alt text](/public/img/chees%20oppnet%202.png "a title")
 
-<h1>opponent 2</h1>
+<h1>Player 2</h1>
 
 ![Alt text](/public/img/chees%20oppnet%202.png "a title")
 
