@@ -1,3 +1,16 @@
+![Alt text](/public/img/chees%20oppnet%201.png "a title")
+
+<h1>opponent 1</h1>
+
+![Alt text](/public/img/chees%20oppnet%202.png "a title")
+
+<h1>opponent 2</h1>
+
+![Alt text](/public/img/chees%20oppnet%202.png "a title")
+
+<h1>Spectator</h1>
+<p>The first and second players connected will be opponents, and the third connected player will take on the role of a Spectator. The Spectator will not be able to move any pieces on the board but can only observe the game.</p>
+
 <h1>Backend</h1>
 - Import: express, http, socket.io, chess.js
 
@@ -8,12 +21,14 @@
 - Create Chess object instance (chess.js)
 
 - Initialize:
-    - Players object: track socket IDs, roles (white/black)
-    - CurrentPlayer: track current turn
+
+  - Players object: track socket IDs, roles (white/black)
+  - CurrentPlayer: track current turn
 
 - Configure Express app:
-    - Use EJS templating engine
-    - Serve static files from 'public' directory
+
+  - Use EJS templating engine
+  - Serve static files from 'public' directory
 
 - Define route for root URL
 - Render EJS template "index"
@@ -22,35 +37,39 @@
 - Socket.io handles connection event
 - Callback executed on client connect
 - Server assigns role based on availability:
-    - If slots empty:
-        - Assign role (white/black)
-        - Inform player
-    - If slots full:
-        - Designate as spectator
+
+  - If slots empty:
+    - Assign role (white/black)
+    - Inform player
+  - If slots full:
+    - Designate as spectator
 
 - Client connection:
-    - Assign role based on game state:
-        - If no white player, assign white role
-        - If no black player, assign black role
-        - Emit "playerRole" event with assigned role
-        - If both slots filled, designate as spectator
-        - Emit "spectatorRole" event
-    - Send initial board state using FEN notation
+
+  - Assign role based on game state:
+    - If no white player, assign white role
+    - If no black player, assign black role
+    - Emit "playerRole" event with assigned role
+    - If both slots filled, designate as spectator
+    - Emit "spectatorRole" event
+  - Send initial board state using FEN notation
 
 - Client disconnection:
-    - Remove assigned role from players object
+
+  - Remove assigned role from players object
 
 - Listen for "move" events:
-    - Validate correct player's turn
-    - If valid:
-        - Update game state
-        - Broadcast move via "move" event
-        - Send updated board state via "boardState" event
-    - If invalid:
-        - Log error message
+
+  - Validate correct player's turn
+  - If valid:
+    - Update game state
+    - Broadcast move via "move" event
+    - Send updated board state via "boardState" event
+  - If invalid:
+    - Log error message
 
 - Ensure smooth gameplay and real-time updates for all connected clients.
- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
  <h1>Frontend</h1>
 
