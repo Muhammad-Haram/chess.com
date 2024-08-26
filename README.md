@@ -11,10 +11,7 @@
 <h1>Spectator</h1>
 <p>The first and second players connected will be opponents, and the third connected player will take on the role of a Spectator. The Spectator will not be able to move any pieces on the board but can only observe the game.</p>
 
-<video width="320" height="240" controls>
-        <source src="/public/img/chess.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-</video>
+<video src="/public/img/chess.mp4" width="320" height="240" controls></video>
 
 <h1>Backend</h1>
 - Import: express, http, socket.io, chess.js
